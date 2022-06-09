@@ -25,7 +25,7 @@ class App extends Component {
 
   render() {
     const { avatars, searchfield } = this.state;
-    const filteredRobots = avatars.filter((avatar) => {
+    const filteredAvatars = avatars.filter((avatar) => {
       return avatar.name.toLowerCase().includes(searchfield.toLowerCase());
     });
 
@@ -42,7 +42,7 @@ class App extends Component {
         </h1>
         <SearchBox searchChange={this.onSearchChange} />
         <Scroll>
-          <CardList avatars={filteredRobots} />
+          <CardList avatars={filteredAvatars} />
         </Scroll>
       </div>
     );
